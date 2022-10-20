@@ -4,8 +4,8 @@
 
 int main() {
 	
-	char q;
-	int a, b;
+	char q, nome[50];
+	int a, b, ano, n=50;
 	float val_hipotenusa, sen;
 	
 	//questão 1
@@ -13,10 +13,10 @@ int main() {
 	
 	//questão 2
 	printf("##################################################");
+	
 	printf("\n\n Digite a questao que deve ser executada:\n\n \t|A|\t |B|\t |C|\t\n\n");
 	printf("Questao: ");
 	scanf("%c", &q);
-	
 	system("cls");
 	
 	switch(q){
@@ -37,16 +37,45 @@ int main() {
 			
 			printf(" REPOSTA:\n\n Hipotenusa: %.3lf\n Seno: %.3lf", val_hipotenusa, sen);
 			
-			
 			break;
 		
 		case 'B':
-			printf("Questao B\n\n");
 			
+			printf("# Questao B: Verificador de ano bissexto. #\n\n");
+			
+			printf("Digite o nome de usuario:\n");
+			scanf("%s", &nome); //utilizar fgets
+			system("cls");
+			
+			printf("Digite o seu ano de nascimento:\n");
+			scanf("%d", &ano);
+			
+			if(ano > 1900 && ano < 2022){
+				
+				if(ano % 4 == 0 && ano % 100 != 0 || ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0){
+					
+					printf("%s, %d e um bissexto.", nome, ano);
+					
+				}
+			
+				else{
+					
+					printf("%s, %d nao e um bissexto.", nome, ano);
+					
+				}	
+			}
+				
+			else{
+				
+			printf("Digite um ano de nascimento valido!\n");
+			
+			}
+			
+			fflush(stdin);		
 			break;
 		
 		case 'C':
-			printf("Questao C\n\n");
+			printf("OPCAO INVALIDA!\n\n");
 			
 			break;
 			
