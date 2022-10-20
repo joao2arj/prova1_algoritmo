@@ -9,7 +9,7 @@ int main() {
 	float val_hipotenusa, sen;
 	
 	//questão 1
-	printf(" Disciplina: Algoritmo e programacao\n Professor: Joyce Siqueira\n Aluno: Joao Pedro Araujo S. Fonseca\n Matricula: UC22000347\n Curso: Analise e Desenvolvimento de sistemas\n Repositorio (Git): https://github.com/joao2arj/prova_algoritmo\n Software utilizado: DevC++\n\n");
+	printf(" Disciplina: Algoritmo e programacao\n Professor: Joyce Siqueira\n Aluno: Joao Pedro Araujo S. Fonseca\n Matricula: UC22000347\n Curso: Analise e Desenvolvimento de sistemas\n Repositorio (Git): https://github.com/joao2arj/prova1_algoritmo\n Software utilizado: DevC++\n\n");
 	
 	//questão 2
 	printf("##################################################");
@@ -53,22 +53,16 @@ int main() {
 			if(ano > 1900 && ano < 2022){
 				
 				if(ano % 4 == 0 && ano % 100 != 0 || ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0){
-					
 					printf("%s, %d e um bissexto.", nome, ano);
-					
 				}
-			
 				else{
-					
 					printf("%s, %d nao e um bissexto.", nome, ano);
 					
 				}	
 			}
 				
 			else{
-				
 			printf("Digite um ano de nascimento valido!\n");
-			
 			}
 			
 			fflush(stdin);		
